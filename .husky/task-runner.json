@@ -1,4 +1,20 @@
 {
   "$schema": "https://alirezanet.github.io/Husky.Net/schema.json",
-  "tasks": []
+  "tasks": [
+    {
+      "name": "check-remote-updates",
+      "group": "pre-push",
+      "command": "bash",
+      "args": [
+        "-c",
+        "git fetch origin && BEHIND=$(git rev-list HEAD..@{u} --count) && if [ $BEHIND -gt 0 ]; then echo '⚠️ 远程有 $BEHIND 个新提交，请先 git pull 再 push' && exit 1; fi"
+      ]
+    },
+    {
+      "name": "lfs-pre-push",
+      "group": "pre-push",
+      "command": "git",
+      "args": ["lfs", "pre-push", "${args}"]
+    }
+  ]
 }
