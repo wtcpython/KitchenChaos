@@ -1,0 +1,12 @@
+# Cocogitto configuration — conventional commits + changelog
+# https://docs.cocogitto.io/
+
+tag_prefix = "v"
+ignore_merge_commits = true
+
+[changelog]
+path = "CHANGELOG.md"
+template = "remote"
+remote = "github.com"
+repository = ""
+owner = ""
