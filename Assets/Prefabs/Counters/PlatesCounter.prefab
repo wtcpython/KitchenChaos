@@ -119,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlantsCounter
   <HoldPoint>k__BackingField: {fileID: 9030805396516256876}
   _selectedCounter: {fileID: 5210393262018486709}
+  _plateSO: {fileID: 11400000, guid: ac2fcd6f4c7354947bea8bc1665c779e, type: 2}
+  spawnRate: 3
 --- !u!4 &7245806094631291529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6221181754713854004, guid: 580865c1a0bc04e1b86083cc826d6b8b, type: 3}

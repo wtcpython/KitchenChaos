@@ -19,6 +19,11 @@ public class KitchenObjectHolder : MonoBehaviour
         }
     }
 
+    public KitchenObjectSO GetKitchenObjectSO()
+    {
+        return KitchenObject.GetKitchenObjectSO();
+    }
+
     public void TransferKitchenObject(KitchenObjectHolder sourceHolder, KitchenObjectHolder targetHolder)
     {
         if (sourceHolder.KitchenObject == null)
