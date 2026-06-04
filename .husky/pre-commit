@@ -19,4 +19,4 @@
 ## or put your custom commands -------------------
 #echo 'Husky.Net is awesome!'
 
-dotnet format whitespace ./Assets/ --folder --verify-no-changes && dotnet build ./KitchenChaos.slnx --no-restore
+dotnet format whitespace ./Assets/ --folder && dotnet format style ./KitchenChaos.slnx && dotnet format analyzers ./KitchenChaos.slnx && git diff --cached --name-only --diff-filter=ACMR -z | xargs -0 git add && dotnet build ./KitchenChaos.slnx --no-restore
