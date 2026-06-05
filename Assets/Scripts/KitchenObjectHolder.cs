@@ -1,7 +1,11 @@
+using System;
+
 using UnityEngine;
 
 public class KitchenObjectHolder : MonoBehaviour
 {
+    public static event EventHandler OnDrop;
+    public static event EventHandler OnPickUp;
     [field: SerializeField]
     public Transform HoldPoint { get; private set; }
 
@@ -11,10 +15,20 @@ public class KitchenObjectHolder : MonoBehaviour
         get => _kitchenObject;
         set
         {
-            _kitchenObject = value;
-            if (_kitchenObject != null)
+            if (_kitchenObject != value && value != null && this is BaseCounter)
             {
-                _kitchenObject.transform.localPosition = Vector3.zero;
+                OnDrop?.Invoke(this, EventArgs.Empty);
+            }
+            else if (_kitchenObject != value && value != null && this is Player)
+            {
+                OnPickUp?.Invoke(this, EventArgs.Empty);
+            }
+            _kitchenObject = value;
+
+            // Set the parent of the kitchen object to the hold point and reset its local position
+            if (value != null)
+            {
+                value.transform.localPosition = Vector3.zero;
             }
         }
     }

@@ -6,7 +6,7 @@ public class StoveCounter : BaseCounter
     [SerializeField] private FryingRecipeListSO _burningRecipeListSO;
     [SerializeField] private StoveCounterVisual _stoveCounterVisual;
     [SerializeField] private ProgressBarUI _progressBarUI;
-
+    [SerializeField] private AudioSource _sound;
     public enum StoveState
     {
         Idle,
@@ -97,6 +97,7 @@ public class StoveCounter : BaseCounter
         _fryingRecipeSO = fryingRecipeSO;
         _stoveState = StoveState.Frying;
         _stoveCounterVisual.ShowStoveEffect();
+        _sound.Play();
     }
 
     private void StartBurning(FryingRecipeSO fryingRecipeSO)
@@ -105,6 +106,7 @@ public class StoveCounter : BaseCounter
         _fryingRecipeSO = fryingRecipeSO;
         _stoveState = StoveState.Burning;
         _stoveCounterVisual.ShowStoveEffect();
+        _sound.Play();
     }
 
     private void TurnToIdle()
@@ -112,5 +114,6 @@ public class StoveCounter : BaseCounter
         _stoveState = StoveState.Idle;
         _stoveCounterVisual.HideStoveEffect();
         _progressBarUI.Hide();
+        _sound.Pause();
     }
 }
