@@ -19,7 +19,7 @@ public class OrderManager : MonoBehaviour
     private float _orderTimer = 0;
     private bool _isStartOrder = false;
     private int _orderCount = 0;
-
+    private int _successDeliveryCount = 0;
     private void Awake()
     {
         Instance = this;
@@ -46,6 +46,7 @@ public class OrderManager : MonoBehaviour
         }
     }
 
+    // 在倒计时结束时生成一个新的订单，如果订单数量已经达到最大值，则不生成新的订单。
     private void OrderANewRecipe()
     {
         if (_orderCount >= _orderMaxCount)
@@ -78,6 +79,7 @@ public class OrderManager : MonoBehaviour
         {
             _ = _orderRecipeSOList.Remove(correctRecipe);
             OnRecipeSuccessed?.Invoke(this, EventArgs.Empty);
+            _successDeliveryCount++;
             print("上菜成功");
         }
     }
@@ -101,5 +103,10 @@ public class OrderManager : MonoBehaviour
     public List<RecipeSO> GetOrderRecipeSOList()
     {
         return _orderRecipeSOList;
+    }
+
+    public int GetSuccessDeliveryCount()
+    {
+        return _successDeliveryCount;
     }
 }

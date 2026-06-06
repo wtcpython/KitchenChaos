@@ -78,4 +78,10 @@ public class KitchenObjectHolder : MonoBehaviour
             KitchenObject = null;
         }
     }
+
+    public static void ClearStaticData()
+    {
+        OnDrop = null;
+        OnPickUp = null;
+    }
 }

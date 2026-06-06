@@ -18,7 +18,7 @@
 向右移动
 传递菜
 烹饪菜
-漂亮  错误
+漂亮  错误  继续 交互 操作
 订单列表
 1234567890
 qwertyuiopasdfghjklzxcvbnm_
