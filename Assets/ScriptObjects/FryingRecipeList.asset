@@ -1,18 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
+---
+!u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_CorrespondingSourceObject: { fileID: 0 }
+  m_PrefabInstance: { fileID: 0 }
+  m_PrefabAsset: { fileID: 0 }
+  m_GameObject: { fileID: 0 }
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script:
+    { fileID: 11500000, guid: add9c77cb39d94ab697ae8b50ae22bc8, type: 3 }
   m_Name: FryingRecipeList
   m_EditorClassIdentifier: Assembly-CSharp::FryingRecipeListSO
   List:
-  - Input: {fileID: 11400000, guid: f28f166d49da4460fbb5e986bcebbcff, type: 2}
-    Output: {fileID: 11400000, guid: 51198fa59eea74f0fbdf69668cc96350, type: 2}
-    FryingTime: 2
+    - Input:
+        { fileID: 11400000, guid: f28f166d49da4460fbb5e986bcebbcff, type: 2 }
+      Output:
+        { fileID: 11400000, guid: 51198fa59eea74f0fbdf69668cc96350, type: 2 }
+      FryingTime: 2

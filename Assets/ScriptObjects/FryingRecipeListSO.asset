@@ -12,11 +12,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script:
     { fileID: 11500000, guid: add9c77cb39d94ab697ae8b50ae22bc8, type: 3 }
-  m_Name: BurningRecipeList
+  m_Name: FryingRecipeListSO
   m_EditorClassIdentifier: Assembly-CSharp::FryingRecipeListSO
   List:
     - Input:
-        { fileID: 11400000, guid: 51198fa59eea74f0fbdf69668cc96350, type: 2 }
+        { fileID: 11400000, guid: f28f166d49da4460fbb5e986bcebbcff, type: 2 }
       Output:
-        { fileID: 11400000, guid: a7da8c642ed4e44db84f90df5116d4ae, type: 2 }
-      FryingTime: 3
+        { fileID: 11400000, guid: 51198fa59eea74f0fbdf69668cc96350, type: 2 }
+      FryingTime: 2

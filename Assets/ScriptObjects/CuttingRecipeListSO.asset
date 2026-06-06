@@ -12,7 +12,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script:
     { fileID: 11500000, guid: 59aab06d5225343f3af0e6a05e08718c, type: 3 }
-  m_Name: CuttingRecipeList
+  m_Name: CuttingRecipeListSO
   m_EditorClassIdentifier: Assembly-CSharp::CuttingRecipeListSO
   List:
     - Input:
