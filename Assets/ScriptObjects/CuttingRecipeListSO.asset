@@ -1,32 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
----
-!u!114 &11400000
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: { fileID: 0 }
-  m_PrefabInstance: { fileID: 0 }
-  m_PrefabAsset: { fileID: 0 }
-  m_GameObject: { fileID: 0 }
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script:
-    { fileID: 11500000, guid: 59aab06d5225343f3af0e6a05e08718c, type: 3 }
+  m_Script: {fileID: 11500000, guid: 59aab06d5225343f3af0e6a05e08718c, type: 3}
   m_Name: CuttingRecipeListSO
   m_EditorClassIdentifier: Assembly-CSharp::CuttingRecipeListSO
   List:
-    - Input:
-        { fileID: 11400000, guid: d747b2e9116d04717a8cdd1a0ec947cf, type: 2 }
-      Output:
-        { fileID: 11400000, guid: 36cea05fea199415e8f092a5e58c79c1, type: 2 }
-      MaxCuttingCount: 3
-    - Input:
-        { fileID: 11400000, guid: ee769b85dd3f94d14977c85f0cfb4b38, type: 2 }
-      Output:
-        { fileID: 11400000, guid: 48f3df98af2ff4195ab20c259c4e4e9b, type: 2 }
-      MaxCuttingCount: 4
-    - Input:
-        { fileID: 11400000, guid: 888f10a9a87f340a49df6fec4b6ba9aa, type: 2 }
-      Output:
-        { fileID: 11400000, guid: f593f42052c754d3280e4be0dd5995f3, type: 2 }
-      MaxCuttingCount: 5
+  - Input: {fileID: 11400000, guid: d747b2e9116d04717a8cdd1a0ec947cf, type: 2}
+    Output: {fileID: 11400000, guid: 36cea05fea199415e8f092a5e58c79c1, type: 2}
+    MaxCuttingCount: 3
+  - Input: {fileID: 11400000, guid: ee769b85dd3f94d14977c85f0cfb4b38, type: 2}
+    Output: {fileID: 11400000, guid: 48f3df98af2ff4195ab20c259c4e4e9b, type: 2}
+    MaxCuttingCount: 4
+  - Input: {fileID: 11400000, guid: 888f10a9a87f340a49df6fec4b6ba9aa, type: 2}
+    Output: {fileID: 11400000, guid: f593f42052c754d3280e4be0dd5995f3, type: 2}
+    MaxCuttingCount: 5
