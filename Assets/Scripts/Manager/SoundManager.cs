@@ -50,6 +50,17 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(_audioClipRefsSO.DeliverySuccess);
     }
+
+    public void PlayCountDownSound()
+    {
+        PlaySound(_audioClipRefsSO.Warning);
+    }
+
+    public void PlayWarningSound()
+    {
+        PlaySound(_audioClipRefsSO.Warning);
+    }
+
     public void PlayStepSound(float volume = .1f)
     {
         PlaySound(_audioClipRefsSO.Footstep, Camera.main.transform.position, volume);

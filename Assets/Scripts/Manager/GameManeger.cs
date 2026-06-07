@@ -21,15 +21,16 @@ public class GameManager : MonoBehaviour
     private float _waitingToStartTimer = 1;
     private float _countDownToStartTimer = 3;
     private float _gamePlayingTimer = 20;
+    private float _gamePlayingTimeTotal;
 
     private bool _isGamePause = false;
 
-    void Awake()
+    private void Awake()
     {
         Instance = this;
-
+        _gamePlayingTimeTotal = _gamePlayingTimer;
     }
-    void Start()
+    private void Start()
     {
         TurnToWaitingToStart();
         GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         ToggleGame();
     }
-    void Update()
+    private void Update()
     {
         switch (_state)
         {
@@ -113,8 +114,12 @@ public class GameManager : MonoBehaviour
 
     public bool IsGameOverState()
     {
-
         return _state == State.GameOver;
+    }
+
+    public bool IsWaitingToStartState()
+    {
+        return _state == State.WaitingToStart;
     }
     public float GetCountDownTimer()
     {
@@ -134,5 +139,15 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             OnGameUnpaused?.Invoke(this, EventArgs.Empty);
         }
+    }
+
+    public float GetGamePlayingTimer()
+    {
+        return _gamePlayingTimer;
+    }
+
+    public float GetGamePlayingTimerNormalized()
+    {
+        return _gamePlayingTimer / _gamePlayingTimeTotal;
     }
 }
